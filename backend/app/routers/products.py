@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from fastapi import status
 
 from ..database import SessionLocal
 from ..models import Product
@@ -18,7 +19,7 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/")
+@router.post("/", status_code=status.HTTP_201_CREATED)
 def create_product(product: ProductCreate, db: Session = Depends(get_db)):
 
     existing = db.query(Product).filter(
