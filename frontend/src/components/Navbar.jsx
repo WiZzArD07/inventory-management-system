@@ -1,25 +1,16 @@
-import { Link } from "react-router-dom";
-
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav>
+    <div className="navbar">
 
-      <Link to="/">Dashboard</Link>
+      <input
+        className="search"
+        placeholder="Search..."
+      />
 
-      {" | "}
+      <div className="user">
+        Admin
+      </div>
 
-      <Link to="/products">Products</Link>
-
-      {" | "}
-
-      <Link to="/customers">Customers</Link>
-
-      {" | "}
-
-      <Link to="/orders">Orders</Link>
-
-    </nav>
+    </div>
   );
 }
-
-export default Navbar;
