@@ -2,6 +2,20 @@
 
 A full-stack Inventory Management System built with FastAPI, React, PostgreSQL, and Docker.
 
+## Live Demo
+
+Frontend:
+https://inventory-management-system-chi-flame-46.vercel.app
+
+Backend API:
+https://inventory-backend-s2lr.onrender.com
+
+API Documentation:
+https://inventory-backend-s2lr.onrender.com/docs
+
+Note: The backend is hosted on Render's free tier and may take 30–60 seconds to wake up after a period of inactivity.
+
+
 ## Features
 
 ### Product Management
