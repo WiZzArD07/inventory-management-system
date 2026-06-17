@@ -4,9 +4,9 @@ from pydantic import Field
 
 class ProductCreate(BaseModel):
 
-    name: str
+    name: str = Field(min_length=2, max_length=100)
 
-    sku: str
+    sku: str = Field(min_length=2, max_length=20)
 
     price: float = Field(gt=0)
 
@@ -34,7 +34,7 @@ class CustomerCreate(BaseModel):
 
     full_name: str = Field(min_length=2)
 
-    email: EmailStr
+    email: EmailStr = Field(max_length=15)
 
     phone: str = Field(min_length=10, max_length=15)
 
